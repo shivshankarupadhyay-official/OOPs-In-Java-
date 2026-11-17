@@ -1,17 +1,9 @@
-class Demo {
-    @Override
-    protected void finalize() {
-        System.out.println("Finalize method called");
-    }
 
-    public static void main(String[] args) {
+package mypack;  // Creating package
 
-        Demo d = new Demo();
+public class Demo {
 
-        d = null; // Object becomes eligible for GC
-
-        System.gc(); // Request garbage collection
-
-        System.out.println("Main method ends");
+    public void display() {
+        System.out.println("Hello from User Defined Package");
     }
 }
